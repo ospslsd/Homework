@@ -1,0 +1,242 @@
+html, body {
+  font-family: Lato, sans-serif;
+  color: #424551;
+}
+
+.wrapper {
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+
+}
+
+.container {
+  max-width: 1260px;
+  padding: 0 15px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.button {
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 52px;
+  padding: 0 40px;
+  color: #FFFFFF;
+  border-radius: 4px;
+  background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+  white-space: nowrap;
+  transition: .3s;
+}
+
+.button:hover {
+  transform: scale(1.1);
+
+}
+
+.button--empty {
+  border-radius: 7px;
+  background-image: none;
+  border-left: 2px solid #FF3F3A;
+  border-right: 2px solid #F75E05;
+  background-image: -webkit-linear-gradient(left, #FF3F3A, #F75E05), -webkit-linear-gradient(left, #FF3F3A, #F75E05);
+  background-image: linear-gradient(left, #FF3F3A, #F75E05), linear-gradient(left, #FF3F3A, #F75E05);
+  background-size: 100% 2px;
+  background-position: 0 100%, 0 0;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+}
+
+.button--empty span {
+  background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo {}
+
+/*********************************************************** */
+.header {
+  font-weight: 700;
+background: url("../images/decor/shapes-bg.svg") 50% 50% /cover no-repeat, linear-gradient(55.95deg, rgba(255, 63, 58, .2) 0%, rgba(247, 94, 5, .2) 100%);
+height: 100vh;
+display: flex;
+flex-direction: column;
+}
+
+.header_top {}
+
+
+.header_top-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+
+.header_logo {
+  margin-right: 60px;
+}
+
+.header_nav {
+  margin-right: auto;
+}
+
+.header_nav-list {
+  display: flex;
+
+}
+
+.header_nav-item {
+  margin-right: 40px;
+}
+
+.header_nav-item :last-child {
+  margin-right: 0;
+}
+
+.header_nav-link {
+  white-space: nowrap;
+  line-height: 1.6;
+  color: #424551;
+
+}
+
+.header_nav-link:hover {
+  color: #FF3F3A;
+  line-height: 1.6;
+  transition: all .3s;
+}
+
+.header_btn-box {
+  display: flex;
+  align-items: center;
+}
+
+.header_top-btn {
+  margin-right: 36px;
+}
+
+.header_user-btn {
+  white-space: nowrap;
+  line-height: 1.6;
+}
+
+.header_user-btn:hover {
+  color: #FF3F3A;
+  line-height: 1.6;
+  transition: all .3s;
+
+}
+
+.button {}
+
+.header_user-nav {
+  position: relative;
+  padding-left: 28px;
+}
+
+.header_user-nav::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: block;
+  background: url("../images/icons/user-icon.svg") no-repeat;
+  width: 20px;
+  height: 20px;
+}
+
+
+/* *************************** ********************/
+
+.header_body {
+  flex: 1 1 auto;
+}
+
+.header_body-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header_main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #1E212C;
+  margin: auto 0;
+}
+
+.header-content {
+  margin-right: 30px
+}
+
+.header_play {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.header_play svg {
+  margin-right: 16px;
+  border-radius: 50%;
+  transition: .3s;
+}
+
+.header_play svg:hover {
+  box-shadow: 0 0 0 16px rgb(255, 63, 58, 0.12);
+}
+
+.header_title {
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 130%;
+  letter-spacing: 1px;
+  max-width: 500px;
+  margin-bottom: 60px;
+}
+
+.header_content-buttons {
+  display: flex;
+}
+
+.header_content-btn {
+  margin-right: 24px;
+}
+
+.header_content-btn:last-child {
+  margin-right: 0;
+}
+
+.header_img {}
+
+.header_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  color: #1E212C;
+  margin-bottom: 80px;
+}
+.header_row>span{
+width: 8px;
+height: 8px;
+background: #FF3F3A;
+border-radius: 50%;
+margin:0 15px;
+}
+.header_row-item {
+  display: flex;
+  align-items: center;
+
+}
+
+.header_row-item span {
+  font-weight: 900;
+  font-size: 46px;
+  line-height: 130%;
+  margin-right: 12px;
+}
