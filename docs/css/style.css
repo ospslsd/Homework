@@ -1,0 +1,329 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+html, body {
+  font-family: 'Manrope', sans-serif;
+}
+
+.wrapper {
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.container {
+  max-width: 1300px;
+padding: 0 15px;
+  margin: 0 auto;
+  height: 100%;
+}
+.button{
+  display: inline-block;
+  font-weight: 600;
+
+  line-height: 32px;
+  padding: 16px 40px;
+  color: #FFFFFF;
+  background: #FF6433;
+  border-radius: 12px;
+  white-space: nowrap;
+  transition: .3s;
+}
+.logo{
+}
+
+/* ******************************************* */
+.header {
+  
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+}
+.header_top-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 0;
+}
+.header_top-logo {
+  padding-right: 475px;
+}
+.header_nav {
+  margin-right: auto;
+}
+.header_nav-list {
+  display: flex;
+}
+.header_nav-item {
+  margin-right: 40px;
+  font-weight: 600;
+}
+.header_nav-item:hover{
+  color: rgb(160, 6, 6);
+  transition: all .3s;
+}
+.header_nav-item:last-child{
+  border-right: 1px solid #939191;;
+  margin-right:32px;
+}
+.header_nav-link {
+  white-space: nowrap;
+line-height: 28px;
+font-family: 'Manrope', sans-serif;
+}
+
+.header_nav-btn{
+  margin-right:14px;
+  border-radius: 50%;
+  }
+  .header_nav-btn:hover{
+  transition: .3s;
+  transform: scale(1.1);
+  }
+
+.header_btn_box{
+display:inline-block
+}
+.header_user_text1{
+  font-family: 'Manrope', sans-serif;
+  color: Black;
+  opacity: 0.7;
+  font-size: 17px;
+  line-height: 24px;
+}
+.header_user_text2 {
+color: #1E1B1B;
+font-family: 'Manrope', sans-serif;
+font-size: 18px;
+line-height: 31px;
+}
+
+/* ***************************************** */
+.header_body {
+  flex: 1 1 auto;
+}
+
+.header_body-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  
+}
+.header_body-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto 0;
+}
+.header_content {
+}
+.header_title {
+  font-family: 'Manrope';
+font-style: normal;
+font-weight: 800;
+font-size: 64px;
+line-height: 84px;
+letter-spacing: -0.03em;
+margin-bottom: 32px;
+margin-right: 21px;
+}
+.header_content-buttons {
+
+  display: flex;
+  
+}
+.header_button1 {
+margin-right: 33px;
+color: #FFFFFF;
+}
+.header_button1:hover{
+  scale: 1.2;
+}
+.header_button1:active{
+  scale: 1;
+  transition: .1s;
+}
+.header_button2 {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+  text-align: right;
+  color: #1E1B1B;  
+}
+.header_button2 svg{
+  margin-right: 15px;
+  border-radius: 50%;
+  transition: .3s;
+}
+.header_button2 svg:hover{
+  box-shadow: 0 0 0 8px rgba(184, 7, 1, 0.884);
+  transition: .3s;
+  scale:2;
+
+}
+.header_button2:hover{
+  color: #FFFFFF;
+}
+.header_button2 svg:active{
+  scale:1.7;
+  transition: .1s;
+}
+.header_main-low{
+  display: flex;
+  flex-direction: row;
+  margin-top: 48px;
+}
+
+.header_body-lowground {
+  display: flex;
+  flex-direction: column;
+}
+.header_body-lowground-image {
+margin-right: 13px;
+position: relative;
+top: 12px;
+
+}
+.header_body-text1 {
+  font-family: 'Manrope';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+color: #939191;
+}
+.header_body-text2 {
+  font-family: 'Manrope';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 175%;
+
+color: #1E1B1B;
+}
+
+.header_body-rightside-time{
+  display: flex;
+  flex-direction: row;
+  background: linear-gradient(138.85deg, #FFFFFF -38.72%, #FFFFFF 70.95%) ;
+  border: 12px solid rgba(225, 225, 225, 0.589);
+  box-shadow: 0px 28px 118px rgba(109, 108, 115, 0.12);
+  opacity: 0.95;
+  border-radius: 59px;
+max-width: 300px;
+padding: 15px auto;
+position:relative;
+top:170px;
+right: 52px;
+
+
+}
+.header_body-rightside-time1{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color:#5CBA99;
+  border-radius: 50%;
+  flex-wrap: wrap;
+  padding: 15px 12px;
+
+}
+.header-rightside-text1{
+  font-family: 'Manrope';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 36px;
+letter-spacing: -0.03em;
+color: #FFFFFF;
+margin-right: 3px;
+}
+.header-rightside-text2{
+  font-family: 'Manrope';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 28px;/* identical to box height, or 175% */
+color: #FFFFFF;
+
+}
+.header-rightside-text3{
+  font-family: 'Manrope';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 36px;
+/* identical to box height, or 150% */
+margin-left: 15px;
+letter-spacing: -0.03em;
+margin-top: 15px;
+/* Black */
+
+color: #1E1B1B;
+}
+
+
+
+
+/****** Style Star Rating Widget *****/
+
+.rating { 
+  border: none;
+  float: left;
+  background-color: #FFFFFF;
+  box-shadow: 0px 28px 118px rgba(109, 108, 115, 0.12);
+  border-radius: 15px;
+  position: relative;
+  bottom:150px;
+  left:450px;
+  padding: 12px 10px ;
+}
+
+.rating > input { display: none; } 
+.rating > label:before { 
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before { 
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label { 
+  color: #ddd; 
+  float: right; 
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
+
+.header_body-rating{
+  bottom:150px;
+  left:480px;
+  position: relative;
+  font-family: 'Manrope';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 36px;
+/* identical to box height, or 150% */
+
+letter-spacing: -0.03em;
+
+color: #ffffff;
+}
