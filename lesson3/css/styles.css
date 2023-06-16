@@ -1732,9 +1732,6 @@ max-width: 450px;
 .directions__list{
   grid-template: none;
 }
-.directions__list-item--empty{
-  display: none;
-}
   }
   /* *********************450PX*************************************** */
   @media(max-width:450px){
