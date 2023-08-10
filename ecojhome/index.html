@@ -17,6 +17,28 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Oranienbaum&display=swap"
         rel="stylesheet">
+    <!-- Marquiz script start -->
+<script>
+(function(w, d, s, o){
+  var j = d.createElement(s); j.async = true; j.src = '//script.marquiz.ru/v2.js';j.onload = function() {
+    if (document.readyState !== 'loading') Marquiz.init(o);
+    else document.addEventListener("DOMContentLoaded", function() {
+      Marquiz.init(o);
+    });
+  };
+  d.head.insertBefore(j, d.head.firstElementChild);
+})(window, document, 'script', {
+    host: '//quiz.marquiz.ru',
+    region: 'eu',
+    id: '64d50afb89d29a0025ad1b0e',
+    autoOpen: false,
+    autoOpenFreq: 'once',
+    openOnExit: false,
+    disableOnMobile: false
+  }
+);
+</script>
+<!-- Marquiz script end -->
     <title>EcoHome</title>
 </head>
 
@@ -685,10 +707,8 @@
                 <div class="quiz__title title">
                     Получите предварительный расчет стоимости дома за 1 минуту
                 </div>
-                <div class="quiz__content">
-                    <div data-marquiz-id="64b690b75cd1900025eb60e1"></div>
-                    <script>(function (t, p) { window.Marquiz ? Marquiz.add([t, p]) : document.addEventListener('marquizLoaded', function () { Marquiz.add([t, p]) }) })('Inline', { id: '64b690b75cd1900025eb60e1', buttonText: 'Пройти тест', bgColor: '#2f3844', textColor: '#ffffff', rounded: true, shadow: 'rgba(47, 56, 68, 0.5)', blicked: true, buttonOnMobile: true, width: '1296', height: '763' })</script>
-                </div>
+               <div data-marquiz-id="64d50afb89d29a0025ad1b0e"></div>
+<script>(function(t, p) {window.Marquiz ? Marquiz.add([t, p]) : document.addEventListener('marquizLoaded', function() {Marquiz.add([t, p])})})('Inline', {id: '64d50afb89d29a0025ad1b0e', buttonText: '', bgColor: '#bea949', textColor: '#fff', rounded: true, shadow: 'rgba(190, 169, 73, 0.5)', blicked: true, width: '1200'})</script>
             </div>
         </section>
         <footer class="footer">
