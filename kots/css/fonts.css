@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'Astrolab';
+src: url(../fonts/Astrolab.ttf);
+}
+@font-face{
+  font-family: 'sfpro';
+  font-weight: 500;
+  src: 
+  url(../fonts/SF-Pro-Display-Medium.otf) format("opentype");
+}
+@font-face{
+  font-family: 'sfpro';
+  font-weight: 600;
+  src: 
+  url(../fonts/SF-Pro-Display-Semibold.otf) format("opentype");
+}
+@font-face{
+  font-family: 'sfpro';
+  font-weight: 800;
+  src: 
+  url(../fonts/SF-Pro-Display-Heavy.otf) format("opentype");
+}
+@font-face{
+  font-family: 'sfpro';
+  font-weight: 900;
+  src: 
+  url(../fonts/SF-Pro-Display-Black.otf) format("opentype");
+}
