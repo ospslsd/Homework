@@ -1,0 +1,47 @@
+@font-face {
+  font-family: Gilroy;
+  font-weight: 400;
+  src: local('Gilroy'),
+    url(Gilroy-Regular.woff2)
+}
+
+@font-face {
+  font-family: Gilroy;
+  font-weight: 500;
+  src: local('Gilroy'),
+    url(Gilroy-Medium.woff2)
+}
+
+@font-face {
+  font-family: Gilroy;
+  font-weight: 600;
+  src: local('Gilroy'),
+    url(Gilroy-Semibold.woff2)
+}
+
+@font-face {
+  font-family: Gilroy;
+  font-weight: 700;
+  src: local('Gilroy'),
+    url(Gilroy-Bold.woff2)
+}
+
+@font-face {
+  font-family: Gilroy;
+  font-weight: 800;
+  src: local('Gilroy'),
+    url(Gilroy-Extrabold.woff2)
+}
+
+@font-face {
+  font-family: Gilroy;
+  font-weight: 900;
+  src: local('Gilroy'),
+    url(Gilroy-Black.woff2)
+}
+
+@font-face {
+  font-family: AA Bebas Neue;
+  src: local('AA Bebas Neue'),
+    url(aa_bebasneue.ttf)
+}
