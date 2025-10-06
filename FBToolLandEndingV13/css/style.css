@@ -2474,7 +2474,9 @@ hr {
 }
 
 @media(max-width:1650px) {
-
+.header__nav-low {
+    top: -10.5%;
+}
 
   .hero__bot-elem {
     width: 255px;
@@ -3466,6 +3468,7 @@ hr {
   .slick-current .tarifs__elem-top p {
     color: white;
   }
+
 
 
 }
