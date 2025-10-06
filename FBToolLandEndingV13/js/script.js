@@ -437,7 +437,7 @@ function initializeApp() {
     autoplay: true,
     autoplaySpeed: 8000,
     centerMode: true,
-
+ infinite:true,
   });
 
 
@@ -1274,4 +1274,5 @@ function goTab(tabIndex) {
   stopAutoSwitch();
   startProgressBar(tabIndex);
 };
+
 goTab(0);
