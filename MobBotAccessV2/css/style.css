@@ -1,0 +1,348 @@
+html {
+  background: rgba(23, 23, 23, 1);
+  scroll-behavior: smooth;
+
+}
+
+
+.wrapper {
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+
+}
+
+.container {
+  max-width: 540px;
+
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  background: url(../img/bg.png);
+  background-size: cover;
+}
+
+.f-disp {
+
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  padding: 24px 0 66px 0;
+  position: relative;
+  
+}
+
+.s-disp {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  padding: 32px 0 66px 0;
+  position: relative;
+
+}
+
+h1 {
+  font-family: Druk Cyr;
+  font-weight: 900;
+  font-size: 65px;
+  text-align: center;
+  font-style: italic;
+  color: white;
+}
+
+.logo {
+  max-width: 102px;
+
+}
+
+.green-txt {
+  background: linear-gradient(180deg, #03FD05 0%, #049903 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0px 0px 34.6px rgba(4, 153, 3, 1);
+  display: block;
+
+}
+
+.video {
+  margin-top: 14px;
+  position: relative;
+  z-index: 2;
+}
+
+.video video {
+  width: 100%;
+  max-width: 241px;
+  border-radius: 17px;
+  border: 2px solid rgba(3, 253, 5, 1)
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: linear-gradient(180deg, #03FD05 0%, #049903 100%);
+  box-shadow: 0px 0px 34.6px 0px rgba(4, 153, 3, 1);
+  max-width: 244px;
+  width: 100%;
+  border-radius: 22px;
+  transition: all .3s;
+  animation: pulse 1.2s infinite alternate ease-in-out;
+  padding: 3px 21px 10px 16px;
+  margin-top: 15px;
+}
+
+.btn-r {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  align-items: flex-start;
+
+}
+
+
+.btn-r p {
+  font-family: Druk Cyr;
+  font-weight: 900;
+  font-style: Italic;
+  font-size: 37px;
+  line-height: 40px;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 0px 2px 0px rgba(4, 153, 3, 1);
+}
+
+.btn-r span {
+  font-family: Druk Cyr;
+  font-weight: 900;
+  font-style: Italic;
+  font-size: 37px;
+  line-height: 40px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  text-shadow: 0px 2px 0px rgba(4, 153, 3, 1);
+}
+
+@keyframes pulse {
+
+  0% {
+    transform: scale(1);
+
+  }
+
+  100% {
+    transform: scale(1.06);
+  }
+
+}
+
+.bomb-r-bot {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  max-width: 110px;
+}
+
+.diam-l-bot {
+  position: absolute;
+  left: 0;
+  top: 55%;
+}
+
+.star-r-top {
+  position: absolute;
+  top: 4%;
+  right: 0;
+}
+
+.coin-bot-l {
+  position: absolute;
+  bottom: 23%;
+  left: 23%;
+  z-index: 0;
+}
+
+.fade-right {
+  display: block;
+}
+
+.s-txt {
+  margin-bottom: 25px;
+
+}
+
+.white-txt {
+  font-family: Druk Cyr;
+  font-weight: 900;
+  font-size: 65px;
+  text-align: center;
+  font-style: italic;
+  color: white;
+  display: block;
+}
+
+.green-txt2 {
+  background: linear-gradient(180deg, #03FD05 0%, #049903 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0px 0px 34.6px rgba(4, 153, 3, 1);
+  display: block;
+  font-family: Druk Cyr;
+  font-weight: 900;
+  font-size: 65px;
+  text-align: center;
+  font-style: italic;
+}
+
+
+
+
+
+.slider {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.slider-elems {
+  width: 350px;
+  display: flex;
+  align-items: center;
+  border: 5px solid rgba(3, 253, 5, 1);
+  border-radius: 16px;
+  height: 100%;
+
+}
+
+.slider-elem {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  max-width: 350px;
+  overflow: hidden;
+}
+
+.slider-elem img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  max-width: 350px;
+}
+
+.slick-dots {
+  position: absolute;
+  top: -5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex !important;
+  align-items: center;
+  gap: 5px;
+
+}
+
+.slick-dots li button {
+  height: 7px;
+  width: 37px;
+  transition: all .3s;
+  background: white;
+  border-radius: 9px;
+
+}
+
+.slick-dots li button {
+  color: transparent;
+  transition: all .3s;
+}
+
+.slick-active button {
+  background: rgba(3, 253, 5, 1) !important;
+  width: 75px !important;
+}
+
+.btn-cont {
+  position: relative;
+  margin-top: 105px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.btn-man {
+  position: absolute;
+  top: -200%;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 251px;
+}
+
+.btn-arrow-l {
+  position: absolute;
+  left:10%;
+  top: 55%;
+  transform: translateY(-50%);
+  animation: arrLeft 2s infinite;
+}
+
+.btn-arrow-r {
+  position: absolute;
+  right: 10%;
+  top: 55%;
+  transform: translateY(-50%);
+  animation: arrRight 2s infinite;
+}
+
+@keyframes arrLeft {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    transform: translate(50%, -50%) scale(1.1);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes arrRight {
+  0% {
+    transform: translate(50%, -50%) scale(1);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+
+  100% {
+    transform: translate(50%, -50%) scale(1);
+  }
+}
+.bomb-bot-s{
+  position: absolute;
+  right: 5%;
+  bottom: 0;
+}
+.diam-r-s{
+  position: absolute;
+  right: 0%;
+  bottom: 20%;
+}
+
+.star-r-s{
+  position: absolute;
+  left: 0;
+  top:15%;
+}
